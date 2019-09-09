@@ -1,0 +1,299 @@
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block; }
+
+figure {
+  margin: 0; }
+
+a:link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 400; }
+
+a:visited {
+  color: #3498db; }
+
+a:hover {
+  color: #151D29;
+  outline: 0; }
+
+a:focus {
+  color: #151D29;
+  outline: thin dotted; }
+
+a:active {
+  color: #151D29;
+  outline: 0; }
+
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+  font-weight: 100; }
+
+img {
+  border: 0;
+  max-width: 100%; }
+.hidden,
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+Helper classes
+========================================================================== */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+
+
+/* ---------------------------------------------------------
+Print styles
+--------------------------------------------------------- */
+@media print {
+  * {
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: transparent !important; }
+  html {
+    background-color: #fff;
+    height: auto !important; }
+  #sidebar {
+    border: none !important; }
+    #sidebar h3 {
+      display: none; }
+    #sidebar #thislink {
+      display: block; }
+  header p {
+    margin: 0;
+    padding: 0; }
+  .print_only {
+    display: block !important; }
+  .no-print {
+    display: none !important; }
+
+  body {
+    display: block;
+    font-size: 12px;
+    overflow: hidden;
+    height: auto !important; }
+  /* Show link destinations in brackets after the link text */
+  a[href]:after {
+    content: ": " attr(href) " "; }
+  a[href] {
+    text-decoration: none;
+    color: #06c;
+    border: none; }
+  h3 {
+    font-weight: bold !important; }
+    h3 a {
+      font-weight: bold !important; }
+  /* Don't show link destinations for JavaScript or internal links */
+  a[href^="javascript:"]:after, a[href^="#"]:after, a.plain[href]:after {
+    content: ""; }
+  /* Show abbr title value in brackets after the text */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  .main-container > div > aside > p {
+    margin: 0;
+    font-size: 14px; }
+  .main-container > div > aside section p {
+    margin: 0;
+    padding: 0; }
+  .main-container > div > aside a {
+    font-size: 14px; }
+  .main-container > div > aside p:before {
+    content: ''; }
+  .main aside {
+    border: 0;
+    padding: 0; } 
+
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #151D29; }
+  body[data-display="none"] {
+    background: #3498db; }
+
+#resume {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1026px; }
+  [data-display="none"] #resume {
+    display: none; }
+
+#sidebar {
+  border-top: 15px solid #388ac1;
+  background: #3498db; }
+  #sidebar a strong {
+    font-weight: normal; }
+  #sidebar a:link, #sidebar a:visited {
+    color: white;
+    font-weight: 100; }
+  #sidebar a:hover, #sidebar a:focus {
+    color: #151D29; }
+  #sidebar #thislink {
+    display: none; }
+  #sidebar #printfriendly {
+    font-weight: 100;
+    font-size: 2rem; }
+
+.portrait-mode {
+  display: none; }
+
+@media all and (orientation: portrait) {
+  .portrait-mode {
+    display: block;
+    text-align: center;
+    background: #3498db;
+    font-size: 1.5em;
+    color: white;
+    padding: 1.5em; } }
+
+.main {
+  padding: 0; }
+  .main article {
+    margin-bottom: 64px; }
+    .main article h1 {
+      font-size: 2em; }
+  .main aside {
+    color: white;
+    padding: 0px 5% 10px; }
+  .main p {
+    font-weight: 400; }
+
+.main h1, .main h2, .main h3 {
+  font-weight: 300; }
+
+.print_only {
+  display: none; }
+
+/* ==========================================================================
+
+========================================================================== */
+.list time {
+  float: right; }
+
+.list section {
+  border-bottom: 1px solid #151D29;
+  font-size: small;
+  margin-left: 1em; }
+  .list section:last-child {
+    border: none; }
+
+.list p {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+  clear: left; }
+
+.list h3 {
+  float: left;
+  margin-bottom: 0;
+  margin-top: 0.3em; }
+
+
+.skill-set {
+  font-size: small;
+  margin-bottom: 16px;
+  overflow: auto; }
+  .skill-set ul {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .skill-set ul li:before {
+      content: "-";
+      color: grey;
+      margin: 0 16px; }
+
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: small;
+  font-style: italic; }
+  .horizontal-list li:last-child:after, .horizontal-list li:nth-child(1):after {
+    content: '';
+    margin: 0; }
+  .horizontal-list li:nth-child(1):after {
+    margin-left: 4px; }
+  .horizontal-list li:after {
+    content: "-";
+    color: grey;
+    margin: 0 2px; }
+
+@media only screen and (min-width: 768px) {
+  #sidebar {
+    box-shadow: 0 5px 10px #aaa;
+    float: right;
+    width: 28%; }
+  #resumeData {
+    float: left;
+    width: 57%; } }
+nav #bgmenu {
+  opacity: 0;
+  pointer-events: none; }
+
+nav #sc-menu1 {
+  cursor: pointer; }
+
+nav #sc-menu3 {
+  cursor: pointer; }
+
+nav #sc-menu5 {
+  cursor: pointer; }
+
+nav #sc-menu6 {
+  cursor: pointer; }
+
