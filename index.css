@@ -25,9 +25,15 @@ a:active {
   outline: 0; }
 
 h1 {
-  margin: 0.67em 0;
+  margin: 0.67em 0 5px 0;
   font-size: 2em;
   font-weight: 100; }
+h4 {
+  margin-top: 0;
+}
+header {
+  border-bottom: 1px solid #000;
+}
 
 img {
   border: 0;
@@ -100,12 +106,6 @@ Print styles
   html {
     background-color: #fff;
     height: auto !important; }
-  #sidebar {
-    border: none !important; }
-    #sidebar h3 {
-      display: none; }
-    #sidebar #thislink {
-      display: block; }
   header p {
     margin: 0;
     padding: 0; }
@@ -121,7 +121,7 @@ Print styles
     height: auto !important; }
   /* Show link destinations in brackets after the link text */
   a[href]:after {
-    content: ": " attr(href) " "; }
+    content: ": (" attr(href) ") "; font-size: 12px;}
   a[href] {
     text-decoration: none;
     color: #06c;
@@ -170,6 +170,33 @@ body {
   max-width: 1026px; }
   [data-display="none"] #resume {
     display: none; }
+#contact {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#skills {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#skills div {
+  background-color: #867f7f;
+  color: #fff;
+  padding: 2px 5px;
+  margin: 4px 10px;
+  border-radius: 5px;
+}
+h2 {
+      display: block;
+    width: 100%;
+}
 
 #sidebar {
   border-top: 15px solid #388ac1;
@@ -212,7 +239,7 @@ body {
     font-weight: 400; }
 
 .main h1, .main h2, .main h3 {
-  font-weight: 300; }
+  font-weight: 300; font-size: 22px;}
 
 .print_only {
   display: none; }
@@ -225,8 +252,8 @@ body {
 
 .list section {
   border-bottom: 1px solid #151D29;
-  font-size: small;
-  margin-left: 1em; }
+  padding: 10px;
+  }
   .list section:last-child {
     border: none; }
 
@@ -273,14 +300,7 @@ body {
     color: grey;
     margin: 0 2px; }
 
-@media only screen and (min-width: 768px) {
-  #sidebar {
-    box-shadow: 0 5px 10px #aaa;
-    float: right;
-    width: 28%; }
-  #resumeData {
-    float: left;
-    width: 57%; } }
+
 nav #bgmenu {
   opacity: 0;
   pointer-events: none; }
@@ -296,4 +316,11 @@ nav #sc-menu5 {
 
 nav #sc-menu6 {
   cursor: pointer; }
+
+.experience h2 {
+  border-bottom: 1px solid #000;
+}
+.experience h4 {
+  margin-bottom: 0;
+}
 
