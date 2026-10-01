@@ -53,9 +53,43 @@ footer{background:var(--dark);color:#cbd5e1;padding:28px 0;text-align:center;fon
  h1{font-size:40px}.grid{grid-template-columns:1fr}.card{padding:22px}
 }
 @media print{
- body{background:#fff}.hero{padding:35px 0;background:#111827!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
- main{padding:20px 0}.card{box-shadow:none;break-inside:avoid}
- a{color:inherit}.grid{grid-template-columns:2fr 1fr}
+  @page{size:A4 portrait;margin:10mm 11mm 11mm 11mm}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{width:210mm;background:#fff!important}
+  body{font-size:9.4pt;line-height:1.42;color:#172033}
+  .container{max-width:none;padding:0}
+  .hero{padding:18px 0 16px;background:#111827!important;color:#fff}
+  .hero-inner{display:block}
+  .eyebrow{font-size:8pt;letter-spacing:.1em}
+  h1{font-size:27pt;margin:4px 0 3px}
+  .hero h2{font-size:12.5pt;margin:0 0 8px}
+  .contact{font-size:8.5pt;gap:4px 12px}
+  .hero-badge{display:none}
+  main{padding:12px 0 0}
+  .grid{display:block}
+  section,aside{width:100%}
+  .card{border:0!important;border-radius:0!important;box-shadow:none!important;padding:0 0 8px!important;margin:0 0 9px!important}
+  h3{font-size:9pt;margin:0 0 6px;padding-bottom:3px;border-bottom:1px solid #cbd5e1}
+  h4{font-size:12pt;margin:0 0 2px}
+  .role{font-size:9.5pt}
+  .meta{font-size:8.5pt;margin-bottom:5px}
+  p{margin:0 0 6px}
+  ul{padding-left:16px;margin:4px 0}
+  li{margin:2.5px 0}
+  .summary{font-size:9.5pt}
+  .tech{font-size:8.2pt;margin-top:5px}
+  .job{padding:0 0 7px;margin:0 0 8px;border-bottom:1px solid #e5eaf2;break-inside:avoid;page-break-inside:avoid}
+  .initiative{padding:5px 0;break-inside:avoid;page-break-inside:avoid}
+  .initiative strong{font-size:9.5pt}
+  .skills{gap:3px}
+  .skill{padding:2px 5px;font-size:7.5pt}
+  .side-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0 18px;margin:0}
+  .side-list li{padding:2px 0;font-size:8.5pt}
+  aside{display:block}
+  aside .card{display:block}
+  footer{display:none}
+  a{color:inherit;text-decoration:none}
+  .card,.job,.initiative{orphans:3;widows:3}
 }
 </style>
 </head>
