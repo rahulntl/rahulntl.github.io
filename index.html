@@ -16,6 +16,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
+.print-connect{display:none}
 .container{max-width:1100px;margin:auto;padding:0 24px}
 .hero{background:linear-gradient(135deg,#0f172a 0%,#172554 55%,#3b0764 100%);color:#fff;padding:72px 0 62px}
 .hero-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
@@ -54,6 +55,10 @@ footer{background:var(--dark);color:#cbd5e1;padding:28px 0;text-align:center;fon
 }
 @media print{
   @page{size:A4 portrait;margin:10mm 11mm 11mm 11mm}
+  .print-connect{display:inline!important}
+  .screen-connect{display:none!important}
+  .hero{margin-top:5mm}
+  .ai-initiatives-card{break-before:page;page-break-before:always}
   *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
   html,body{width:210mm;background:#fff!important}
   body{font-size:9.4pt;line-height:1.42;color:#172033}
@@ -224,7 +229,7 @@ footer{background:var(--dark);color:#cbd5e1;padding:28px 0;text-align:center;fon
     </div>
   </article>
 
-  <article class="card">
+  <article class="card ai-initiatives-card">
     <h3>Selected AI Engineering Initiatives</h3>
     <div class="initiative"><strong>Multi-Agent Software Engineering Workflow</strong><p>Designed an internal multi-agent workflow covering planning → research → development → security review → testing → verification, with specialized instructions, rules and output formats for each stage.</p></div>
     <div class="initiative"><strong>AI-Powered JIRA Engineering Workflow</strong><p>Created AI workflows that analyze JIRA issues, requirements and existing implementation context to produce development approaches, implementation steps, testing considerations and potential risks.</p></div>
@@ -264,9 +269,9 @@ footer{background:var(--dark);color:#cbd5e1;padding:28px 0;text-align:center;fon
 
   <article class="card">
     <h3>Connect</h3>
-    <p><a href="https://www.linkedin.com/in/rahulntl/" target="_blank" rel="noopener">LinkedIn →</a></p>
-    <p><a href="mailto:rahul.ntl@gmail.com">Email →</a></p>
-    <p><a href="tel:+9198112073986">Call →</a></p>
+    <p><a href="https://www.linkedin.com/in/rahulntl/" target="_blank" rel="noopener"><span class="screen-connect">LinkedIn →</span><span class="print-connect">LinkedIn: linkedin.com/in/rahulntl/</span></a></p>
+    <p><a href="mailto:rahul.ntl@gmail.com"><span class="screen-connect">Email →</span><span class="print-connect">Email: rahul.ntl@gmail.com</span></a></p>
+    <p><a href="tel:+9198112073986"><span class="screen-connect">Call →</span><span class="print-connect">Call: +91 98112073986</span></a></p>
   </article>
 </aside>
 
